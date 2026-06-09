@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 const navItems = [
-  'Trang chủ',
-  'Giới thiệu',
-  'Tuyến xe Limousine',
-  'Tuyến xe cố định',
-  'Dịch vụ',
-  'Chính sách',
-  'Tin tức',
-  'Liên hệ',
+  { label: 'Trang chủ', href: '#trang-chu' },
+  { label: 'Giới thiệu', href: '#gioi-thieu' },
+  { label: 'Tuyến xe Limousine', href: '#tuyen-xe-limousine' },
+  { label: 'Tuyến xe cố định', href: '#tuyen-xe-co-dinh' },
+  { label: 'Dịch vụ', href: '#dich-vu' },
+  { label: 'Chính sách', href: '#chinh-sach' },
+  { label: 'Tin tức', href: '#tin-tuc' },
+  { label: 'Liên hệ', href: '#lien-he' },
 ]
 
 const featureItems = [
@@ -56,6 +56,67 @@ const serviceCards = [
       'Khung giờ vận hành linh hoạt, thuận tiện cho công việc và du lịch.',
       'Kênh hỗ trợ đặt vé luôn sẵn sàng giải đáp khi cần thiết.',
     ],
+  },
+]
+
+const aboutHighlights = [
+  'Hơn 10 năm kinh nghiệm vận tải hành khách',
+  'Đội xe hiện đại, đạt tiêu chuẩn an toàn',
+  'Lịch chạy cố định, đều đặn mỗi ngày',
+  'Hỗ trợ khách hàng 24/7',
+]
+
+const limousineFeatures = [
+  'Xe Limousine 9 chỗ cao cấp, ghế massage thư giãn',
+  'Đón/trả tận nơi theo yêu cầu của khách',
+  'Nước uống và khăn lạnh miễn phí trên xe',
+  'Tài xế chuyên nghiệp, lịch sự và có kinh nghiệm',
+]
+
+const policyItems = [
+  {
+    title: 'Chính sách hoàn, hủy, đổi vé',
+    content:
+      'Khách hàng có thể hủy vé trước 24 giờ khởi hành và được hoàn 80% giá trị vé. Đổi vé sang chuyến khác được hỗ trợ miễn phí.',
+  },
+  {
+    title: 'Chính sách giao nhận hàng hóa',
+    content:
+      'Hàng hóa được kiểm tra trước khi nhận và bàn giao nguyên vẹn đến người nhận. Nhà xe chịu trách nhiệm bồi thường nếu xảy ra hư hỏng do vận chuyển.',
+  },
+  {
+    title: 'Chính sách thanh toán',
+    content:
+      'Hỗ trợ thanh toán tiền mặt, chuyển khoản ngân hàng và các ví điện tử phổ biến như MoMo, ZaloPay, VNPay.',
+  },
+  {
+    title: 'Điều khoản bảo mật thông tin',
+    content:
+      'Thông tin cá nhân của khách hàng được bảo mật tuyệt đối, không chia sẻ với bên thứ ba vì bất kỳ mục đích thương mại nào.',
+  },
+]
+
+const newsItems = [
+  {
+    date: '05/06/2026',
+    title: 'An Nhiên mở thêm chuyến sáng sớm tuyến Cẩm Phả – Hà Nội',
+    excerpt:
+      'Từ ngày 10/06/2026, An Nhiên bổ sung chuyến khởi hành lúc 4:30 sáng, phục vụ khách hàng có nhu cầu bắt chuyến bay sớm tại sân bay Nội Bài.',
+    image: '/An-Nhien-Quang-Ninh-4.webp',
+  },
+  {
+    date: '28/05/2026',
+    title: 'Khuyến mãi mùa hè: giảm 15% cho vé đặt trước 3 ngày',
+    excerpt:
+      'Chương trình áp dụng từ 01/06 đến 31/08/2026 cho tất cả các tuyến đang khai thác. Đặt ngay để được hưởng mức giá ưu đãi tốt nhất.',
+    image: '/anhxedangchao.jpeg',
+  },
+  {
+    date: '15/05/2026',
+    title: 'An Nhiên được vinh danh "Nhà xe uy tín 2026"',
+    excerpt:
+      'Nhà xe An Nhiên đã được khách hàng bình chọn và nhận danh hiệu Nhà xe uy tín tuyến Cẩm Phả – Hà Nội năm 2026 từ Hiệp hội Vận tải tỉnh Quảng Ninh.',
+    image: '/nhaxe.jpeg',
   },
 ]
 
@@ -308,15 +369,15 @@ function App() {
           aria-label="Điều hướng chính"
         >
           {navItems.map((item) => (
-            <a key={item} href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              {item}
+            <a key={item.href} href={item.href} className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              {item.label}
             </a>
           ))}
         </nav>
       </header>
 
       <main>
-        <section className="hero" aria-label="Tìm chuyến xe">
+        <section id="trang-chu" className="hero" aria-label="Tìm chuyến xe">
           <div className="hero-overlay" />
           <div className="hero-content">
             <h1>Đặt vé xe An Nhiên nhanh chóng, tiện lợi</h1>
@@ -356,7 +417,7 @@ function App() {
           ))}
         </section>
 
-        <section className="service-showcase" aria-labelledby="service-showcase-title">
+        <section id="dich-vu" className="service-showcase" aria-labelledby="service-showcase-title">
           <div className="service-showcase-heading">
             <h2 id="service-showcase-title">An Nhiên - Đồng hành an tâm trên mọi hành trình</h2>
             <p>Giải pháp di chuyển tiện lợi, chuyên nghiệp và thống nhất với trải nghiệm thương hiệu An Nhiên.</p>
@@ -393,7 +454,60 @@ function App() {
           </div>
         </section>
 
-        <section className="popular-routes" aria-labelledby="popular-routes-title">
+        <section id="gioi-thieu" className="about-section" aria-labelledby="about-title">
+          <div className="about-grid">
+            <div className="about-content">
+              <p className="about-eyebrow">Về chúng tôi</p>
+              <h2 id="about-title">Nhà xe An Nhiên – Đồng hành trên mọi hành trình</h2>
+              <p>
+                An Nhiên là nhà xe uy tín chuyên khai thác tuyến vận tải hành khách cố định
+                Cẩm Phả – Hà Nội, với lịch trình đều đặn mỗi ngày và đội ngũ phục vụ
+                chuyên nghiệp, tận tâm.
+              </p>
+              <p>
+                Chúng tôi cam kết mang đến trải nghiệm di chuyển an toàn, thoải mái và đúng
+                giờ cho mọi hành khách trên từng chặng đường.
+              </p>
+              <ul className="about-highlights">
+                {aboutHighlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="about-image" aria-hidden="true" />
+          </div>
+        </section>
+
+        <section id="tuyen-xe-limousine" className="limousine-section" aria-labelledby="limousine-title">
+          <div className="limousine-inner">
+            <div className="limousine-heading">
+              <h2 id="limousine-title">Tuyến xe Limousine</h2>
+              <p>Trải nghiệm di chuyển đẳng cấp, tiện nghi trên từng hành trình.</p>
+            </div>
+
+            <div className="limousine-card">
+              <div className="limousine-image" aria-hidden="true" />
+              <div className="limousine-content">
+                <h3>Limousine cao cấp – Tuyến Cẩm Phả / Hạ Long – Hà Nội</h3>
+                <p>
+                  An Nhiên cung cấp dịch vụ xe Limousine sang trọng phục vụ nhu cầu di chuyển
+                  cao cấp cho quý khách hàng doanh nhân và gia đình. Hành trình êm ái, tiện
+                  nghi và đúng giờ.
+                </p>
+                <ul className="limousine-features">
+                  {limousineFeatures.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <button type="button" className="limousine-cta">
+                  Đặt Limousine ngay
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tuyen-xe-co-dinh" className="popular-routes" aria-labelledby="popular-routes-title">
           <div className="popular-routes-heading">
             <h2 id="popular-routes-title">Lộ trình phổ biến của An Nhiên</h2>
             <p>Những tuyến xe được khách hàng lựa chọn thường xuyên.</p>
@@ -471,7 +585,47 @@ function App() {
           </div>
         </section>
 
-        <section className="support-feedback" aria-labelledby="support-feedback-title">
+        <section id="chinh-sach" className="policy-section" aria-labelledby="policy-title">
+          <div className="policy-heading">
+            <h2 id="policy-title">Chính sách & Điều khoản</h2>
+            <p>Các chính sách minh bạch, bảo vệ quyền lợi tối đa cho khách hàng.</p>
+          </div>
+          <div className="policy-grid">
+            {policyItems.map((item) => (
+              <article key={item.title} className="policy-card">
+                <h3>{item.title}</h3>
+                <p>{item.content}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="tin-tuc" className="news-section" aria-labelledby="news-title">
+          <div className="news-inner">
+            <div className="news-heading">
+              <h2 id="news-title">Tin tức</h2>
+              <p>Cập nhật thông tin mới nhất về lịch trình, khuyến mãi và hoạt động của An Nhiên.</p>
+            </div>
+            <div className="news-grid">
+              {newsItems.map((item) => (
+                <article key={item.title} className="news-card">
+                  <div
+                    className="news-card-image"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                    aria-hidden="true"
+                  />
+                  <div className="news-card-body">
+                    <p className="news-card-date">{item.date}</p>
+                    <h3>{item.title}</h3>
+                    <p>{item.excerpt}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="lien-he" className="support-feedback" aria-labelledby="support-feedback-title">
           <div className="support-feedback-grid">
             <article className="support-panel">
               <h2 id="support-feedback-title">Tổng đài đặt xe</h2>

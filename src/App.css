@@ -887,6 +887,324 @@
   padding: 0.45rem 0.85rem;
 }
 
+/* Scroll offset for sticky header */
+#trang-chu,
+#gioi-thieu,
+#tuyen-xe-limousine,
+#tuyen-xe-co-dinh,
+#dich-vu,
+#chinh-sach,
+#tin-tuc,
+#lien-he {
+  scroll-margin-top: 80px;
+}
+
+/* About section */
+.about-section {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 4.5rem 1rem 4rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-eyebrow {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+
+.about-content h2 {
+  margin: 0.5rem 0 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+}
+
+.about-content > p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.about-highlights {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.about-highlights li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.about-highlights li::before {
+  content: '';
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--primary);
+  flex: 0 0 auto;
+}
+
+.about-image {
+  height: 460px;
+  border-radius: 1.6rem;
+  background-image: linear-gradient(rgba(16, 83, 81, 0.1), rgba(16, 83, 81, 0.2)), url('/An-Nhien-Quang-Ninh-4.webp');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 48px rgba(16, 83, 81, 0.15);
+  border: 1px solid #d5eceb;
+}
+
+/* Limousine section */
+.limousine-section {
+  background: linear-gradient(180deg, #dff7f6 0%, #f3fbfb 100%);
+  padding: 4.5rem 1rem 4rem;
+}
+
+.limousine-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.limousine-heading {
+  text-align: center;
+}
+
+.limousine-heading h2 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+}
+
+.limousine-heading p {
+  margin: 0.85rem auto 0;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.limousine-card {
+  margin-top: 3rem;
+  background: #fff;
+  border-radius: 1.6rem;
+  border: 1px solid #d5eceb;
+  box-shadow: 0 20px 40px rgba(16, 83, 81, 0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.limousine-image {
+  min-height: 380px;
+  background-image: linear-gradient(rgba(16, 83, 81, 0.15), rgba(16, 83, 81, 0.3)), url('/anhxedangchao.jpeg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.limousine-content {
+  padding: 2.5rem;
+}
+
+.limousine-content h3 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.25;
+}
+
+.limousine-content > p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.limousine-features {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.limousine-features li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.limousine-features li::before {
+  content: '';
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--primary);
+  flex: 0 0 auto;
+}
+
+.limousine-cta {
+  margin-top: 2rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.limousine-cta:hover {
+  background: var(--primary-dark);
+}
+
+/* Policy section */
+.policy-section {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 4.5rem 1rem 4rem;
+}
+
+.policy-heading {
+  text-align: center;
+}
+
+.policy-heading h2 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+}
+
+.policy-heading p {
+  margin: 0.85rem auto 0;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.policy-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.policy-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  border: 1px solid #d5eceb;
+  padding: 1.6rem;
+  box-shadow: 0 8px 24px rgba(16, 83, 81, 0.07);
+}
+
+.policy-card h3 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: 1.2rem;
+}
+
+.policy-card p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* News section */
+.news-section {
+  background: linear-gradient(180deg, #dff7f6 0%, #f3fbfb 100%);
+  padding: 4.5rem 1rem 4rem;
+}
+
+.news-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.news-heading {
+  text-align: center;
+}
+
+.news-heading h2 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+}
+
+.news-heading p {
+  margin: 0.85rem auto 0;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.news-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.news-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  border: 1px solid #d5eceb;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(16, 83, 81, 0.07);
+}
+
+.news-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.news-card-body {
+  padding: 1.3rem;
+}
+
+.news-card-date {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: 0.04em;
+}
+
+.news-card-body h3 {
+  margin: 0.5rem 0 0;
+  color: var(--primary-deep);
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.news-card-body p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
 @media (max-width: 1024px) {
   .site-header {
     padding: 0.75rem 1rem;
@@ -974,6 +1292,31 @@
   }
 
   .support-feedback-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 300px;
+    order: -1;
+  }
+
+  .limousine-card {
+    grid-template-columns: 1fr;
+  }
+
+  .limousine-image {
+    min-height: 260px;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-grid {
     grid-template-columns: 1fr;
   }
 
