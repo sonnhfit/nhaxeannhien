@@ -571,6 +571,148 @@
   background: var(--primary-dark);
 }
 
+.support-feedback {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1rem 5rem;
+}
+
+.support-feedback-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.8rem;
+}
+
+.support-panel,
+.feedback-panel {
+  border-radius: 1.6rem;
+  border: 1px solid #d5eceb;
+  box-shadow: 0 18px 38px rgba(16, 83, 81, 0.12);
+}
+
+.support-panel {
+  background: #e7f8f7;
+  padding: 2rem;
+}
+
+.support-panel h2,
+.feedback-panel h2 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.support-panel > p {
+  margin: 0.65rem 0 0;
+  color: #4b5563;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.support-box {
+  margin-top: 1.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+}
+
+.support-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 360px;
+}
+
+.support-hotlines {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.2rem;
+  align-content: center;
+}
+
+.support-hotline-item h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 2rem;
+}
+
+.support-hotline-item a {
+  margin-top: 0.65rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary);
+  border: 2px solid var(--primary-dark);
+  border-radius: 999px;
+  padding: 0.65rem 1.6rem;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.support-hotline-item a:hover {
+  background: var(--primary-dark);
+}
+
+.feedback-panel {
+  background:
+    linear-gradient(180deg, rgba(57, 195, 192, 0.25), rgba(57, 195, 192, 0.05)),
+    url('/An-Nhien-Quang-Ninh-4.webp') center / cover;
+  padding: 2rem;
+}
+
+.feedback-list {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 1.1rem;
+  max-height: 570px;
+  overflow: auto;
+  padding-right: 0.35rem;
+}
+
+.feedback-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(35, 138, 136, 0.25);
+  border-radius: 1.1rem;
+  padding: 1rem 1.1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.feedback-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--primary-dark);
+}
+
+.feedback-card h3 {
+  margin: 0;
+  color: var(--text);
+}
+
+.feedback-stars {
+  margin: 0.2rem 0 0;
+  color: #f59e0b;
+  letter-spacing: 0.1em;
+}
+
+.feedback-card p:last-child {
+  margin: 0.45rem 0 0;
+  color: #334155;
+  line-height: 1.5;
+}
+
 @media (max-width: 1024px) {
   .site-header {
     padding: 0.75rem 1rem;
@@ -639,6 +781,23 @@
     margin-top: 1rem;
     max-width: 100%;
   }
+
+  .support-feedback {
+    padding-bottom: 3rem;
+  }
+
+  .support-feedback-grid,
+  .support-box {
+    grid-template-columns: 1fr;
+  }
+
+  .support-box img {
+    min-height: 250px;
+  }
+
+  .feedback-list {
+    max-height: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -668,5 +827,24 @@
   .shipping-cta {
     width: 100%;
     font-size: 1.2rem;
+  }
+
+  .support-panel,
+  .feedback-panel {
+    padding: 1.2rem;
+  }
+
+  .support-hotlines {
+    padding: 1rem;
+  }
+
+  .support-hotline-item h3 {
+    font-size: 1.35rem;
+  }
+
+  .support-hotline-item a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.35rem;
   }
 }
