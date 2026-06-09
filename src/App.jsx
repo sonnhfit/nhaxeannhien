@@ -516,10 +516,7 @@ function App() {
         <section className="shipping-service" aria-labelledby="shipping-service-title">
           <div className="shipping-service-grid">
             <article className="shipping-visual-card">
-              <img
-                src="https://github.com/user-attachments/assets/634d29f9-33fc-47e7-a8a7-5923a63ce933"
-                alt="Dịch vụ gửi hàng An Nhiên Express"
-              />
+              <img src="/nhaxe.jpeg" alt="Dịch vụ gửi hàng An Nhiên Express" />
               <div className="shipping-floating-note">
                 <span className="shipping-floating-icon">
                   <ShippingFeatureIcon type="express" />
