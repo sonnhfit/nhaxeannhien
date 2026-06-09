@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import heroImage from './assets/hero.png'
 
@@ -355,6 +356,8 @@ function ShippingFeatureIcon({ type }) {
 }
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <div className="page">
       <header className="site-header">
@@ -365,9 +368,25 @@ function App() {
             <p className="brand-tagline">Nhà xe an toàn - chất lượng</p>
           </div>
         </div>
-        <nav className="main-nav" aria-label="Điều hướng chính">
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          <span className="sr-only">Mở menu điều hướng</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+        <nav
+          id="main-navigation"
+          className={`main-nav ${isMenuOpen ? 'is-open' : ''}`}
+          aria-label="Điều hướng chính"
+        >
           {navItems.map((item) => (
-            <a key={item} href="#" className="nav-link">
+            <a key={item} href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               {item}
             </a>
           ))}
