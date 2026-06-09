@@ -108,6 +108,30 @@ const shippingFeatures = [
   },
 ]
 
+const supportHotlines = [
+  { region: 'Thái Nguyên', phone: '0989.759.759' },
+  { region: 'Quảng Ninh', phone: '0817.759.759' },
+]
+
+const customerReviews = [
+  {
+    name: 'Hoàng Long',
+    text: 'Đi nhiều tuyến của An Nhiên trong năm nay và thấy yên tâm hơn hẳn. Xe sạch, đúng giờ và hỗ trợ rất nhiệt tình.',
+  },
+  {
+    name: 'Mai Lan',
+    text: 'Mình thích nhất là cách nhân viên hỗ trợ nhanh và rõ ràng. Đặt vé đơn giản, đón trả đúng hẹn.',
+  },
+  {
+    name: 'Tuấn Việt',
+    text: 'Có lần mình cần đổi giờ gấp nhưng tổng đài xử lý rất nhanh. Trải nghiệm dịch vụ ổn định và chuyên nghiệp.',
+  },
+  {
+    name: 'Sophia Eiz',
+    text: 'Xe vận hành êm, tài xế lịch sự và thông tin chuyến được cập nhật đầy đủ. Mình rất hài lòng.',
+  },
+]
+
 function RouteInfoIcon({ type }) {
   if (type === 'distance') {
     return (
@@ -531,6 +555,51 @@ function App() {
               <button type="button" className="shipping-cta">
                 Liên hệ gửi hàng
               </button>
+            </article>
+          </div>
+        </section>
+
+        <section className="support-feedback" aria-labelledby="support-feedback-title">
+          <div className="support-feedback-grid">
+            <article className="support-panel">
+              <h2 id="support-feedback-title">Tổng đài đặt xe</h2>
+              <p>Tổng đài An Nhiên hỗ trợ khách hàng 24/7.</p>
+
+              <div className="support-box">
+                <img
+                  src="https://github.com/user-attachments/assets/80d8842b-d5e9-4e03-bd78-768c6c18d2dc"
+                  alt="Tổng đài hỗ trợ đặt xe An Nhiên"
+                />
+
+                <div className="support-hotlines">
+                  {supportHotlines.map((item) => (
+                    <div key={item.region} className="support-hotline-item">
+                      <h3>Hotline {item.region}</h3>
+                      <a href={`tel:${item.phone.replaceAll('.', '')}`}>{item.phone}</a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+
+            <article className="feedback-panel" aria-label="Nhận xét của khách hàng">
+              <h2>Nhận xét của khách hàng</h2>
+              <div className="feedback-list">
+                {customerReviews.map((review) => (
+                  <article key={review.name} className="feedback-card">
+                    <div className="feedback-avatar" aria-hidden="true">
+                      {review.name.slice(0, 1)}
+                    </div>
+                    <div>
+                      <h3>{review.name}</h3>
+                      <p className="feedback-stars" aria-label="5 sao">
+                        {'★★★★★'}
+                      </p>
+                      <p>{review.text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </article>
           </div>
         </section>
