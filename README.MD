@@ -1,6 +1,24 @@
-website vận tải hành khách và hàng hoá, nhaxeannhien.vn sử dụng vite react thân thiện SEO 
+# Nhà xe An Nhiên - Vite React
 
-tông màu chủ đạo #39c3c0
+Website vận tải hành khách và hàng hoá cho nhà xe An Nhiên, xây dựng bằng Vite + React.
 
-thân thiện với mobile 
+## Yêu cầu đã áp dụng
 
+- Tông màu chủ đạo: `#39c3c0`
+- Giao diện thân thiện mobile
+- Cấu trúc trang chủ theo phong cách tham khảo từ ảnh mẫu
+- Thiết lập metadata SEO cơ bản trong `index.html`
+
+## Chạy dự án
+
+```bash
+npm install
+npm run dev
+```
+
+## Kiểm tra chất lượng
+
+```bash
+npm run lint
+npm run build
+```
