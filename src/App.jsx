@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 const navItems = [
   { label: 'Trang chủ', href: '#trang-chu' },
@@ -340,6 +340,21 @@ function ShippingFeatureIcon({ type }) {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const departureDateInputRef = useRef(null)
+  const returnDateInputRef = useRef(null)
+
+  const openNativeDatePicker = (inputElement) => {
+    if (!inputElement) {
+      return
+    }
+
+    if (typeof inputElement.showPicker === 'function') {
+      inputElement.showPicker()
+      return
+    }
+
+    inputElement.focus()
+  }
 
   return (
     <div className="page">
@@ -398,11 +413,20 @@ function App() {
             </label>
             <label>
               Ngày đi
-              <input type="date" defaultValue="2026-06-09" />
+              <input
+                ref={departureDateInputRef}
+                type="date"
+                defaultValue="2026-06-09"
+                onClick={() => openNativeDatePicker(departureDateInputRef.current)}
+              />
             </label>
             <label>
               Ngày về
-              <input type="date" />
+              <input
+                ref={returnDateInputRef}
+                type="date"
+                onClick={() => openNativeDatePicker(returnDateInputRef.current)}
+              />
             </label>
             <button type="button">Tìm chuyến</button>
           </form>
