@@ -90,6 +90,24 @@ const routeColumns = [
   },
 ]
 
+const shippingFeatures = [
+  {
+    title: 'Giao nhận trong ngày',
+    text: 'Hàng hóa được luân chuyển liên tục theo các chuyến xe dày đặc mỗi ngày, đảm bảo tiến độ gửi nhận nhanh chóng.',
+    icon: 'same-day',
+  },
+  {
+    title: 'Đóng gói an toàn',
+    text: 'Quy trình kiểm soát và bảo quản nghiêm ngặt, giúp kiện hàng nguyên vẹn trong suốt quá trình vận chuyển.',
+    icon: 'packing',
+  },
+  {
+    title: 'Cước phí cạnh tranh',
+    text: 'Mức giá gửi hàng được tối ưu theo lộ trình thực tế để khách hàng tiết kiệm chi phí hơn.',
+    icon: 'pricing',
+  },
+]
+
 function RouteInfoIcon({ type }) {
   if (type === 'distance') {
     return (
@@ -218,6 +236,90 @@ function ServiceFeatureIcon({ type }) {
       />
       <path
         d="M12 3.8 5.8 6.3v4.4c0 4 2.5 7.7 6.2 9 3.7-1.3 6.2-5 6.2-9V6.3L12 3.8Z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  )
+}
+
+function ShippingFeatureIcon({ type }) {
+  if (type === 'packing') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M4 8.5 12 4l8 4.5M4 8.5V16L12 20l8-4V8.5"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+        <path
+          d="M12 20V12M4 8.5l8 3.5 8-3.5"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    )
+  }
+
+  if (type === 'pricing') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M5 7.5h14M5 12h14M5 16.5h14"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+        <path
+          d="M8.5 5.5c-1 0-1.8.7-1.8 1.6s.8 1.5 1.8 1.5 1.8.7 1.8 1.6-.8 1.6-1.8 1.6M8.5 5.5V4M8.5 12.2v1.5"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    )
+  }
+
+  if (type === 'express') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M13 4 8 13h4l-1 7 5-9h-4l1-7Z"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M4 14V8.8C4 7.8 4.8 7 5.8 7H15c.8 0 1.5.4 1.9 1l2 3c.4.5.6 1.1.6 1.8v2.7"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M6.5 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM4 13h15"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -385,6 +487,52 @@ function App() {
           <button type="button" className="show-more-routes">
             Xem thêm
           </button>
+        </section>
+
+        <section className="shipping-service" aria-labelledby="shipping-service-title">
+          <div className="shipping-service-grid">
+            <article className="shipping-visual-card">
+              <img
+                src="https://github.com/user-attachments/assets/634d29f9-33fc-47e7-a8a7-5923a63ce933"
+                alt="Dịch vụ gửi hàng An Nhiên Express"
+              />
+              <div className="shipping-floating-note">
+                <span className="shipping-floating-icon">
+                  <ShippingFeatureIcon type="express" />
+                </span>
+                <div>
+                  <h3>Giao hàng hỏa tốc</h3>
+                  <p>Nhận và giao nhanh, tối ưu chi phí cho từng kiện hàng.</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="shipping-details">
+              <h2 id="shipping-service-title">Dịch vụ gửi hàng | An Nhiên Express</h2>
+              <p>
+                Không chỉ dẫn đầu về vận tải hành khách, An Nhiên còn là đối tác gửi hàng đáng tin cậy
+                với hệ thống điều phối linh hoạt và quy trình giao nhận chuyên nghiệp.
+              </p>
+
+              <ul className="shipping-feature-list">
+                {shippingFeatures.map((feature) => (
+                  <li key={feature.title}>
+                    <span className="shipping-feature-icon">
+                      <ShippingFeatureIcon type={feature.icon} />
+                    </span>
+                    <div>
+                      <h3>{feature.title}</h3>
+                      <p>{feature.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <button type="button" className="shipping-cta">
+                Liên hệ gửi hàng
+              </button>
+            </article>
+          </div>
         </section>
       </main>
     </div>
