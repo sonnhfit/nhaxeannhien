@@ -133,6 +133,21 @@ const customerReviews = [
   },
 ]
 
+const footerCustomerLinks = [
+  'Tra cứu hợp đồng',
+  'Tra cứu đơn hàng',
+  'Quy định đặt hợp đồng',
+  'Chính sách hoàn, hủy, đổi hợp đồng',
+  'Chính sách giao nhận hàng hóa',
+  'Chính sách thanh toán',
+  'Chính sách bảo mật thanh toán',
+  'Điều khoản bảo mật thông tin',
+  'Điều kiện cung cấp dịch vụ',
+  'Nghĩa vụ của người bán và khách hàng',
+]
+
+const footerCompanyLinks = ['Giới thiệu', 'Văn phòng', 'Tin tức', 'Tuyến xe']
+
 function RouteInfoIcon({ type }) {
   if (type === 'distance') {
     return (
@@ -620,6 +635,84 @@ function App() {
           </div>
         </section>
       </main>
+
+      <footer className="site-footer" aria-label="Thông tin chân trang">
+        <div className="site-footer-grid">
+          <section className="footer-company">
+            <div className="footer-brand">
+              <div className="footer-brand-logo">an</div>
+              <div>
+                <p className="footer-brand-name">AN NHIÊN</p>
+                <p className="footer-brand-tagline">Sứ mệnh tiên phong</p>
+              </div>
+            </div>
+
+            <h2>Công ty CP Thương Mại và Du Lịch An Nhiên</h2>
+            <p>GPKD số 4600346825 do Sở KH và ĐT TP Thái Nguyên cấp ngày 30/10/2003</p>
+
+            <ul className="footer-contact-list">
+              <li>Số 271, Đường Dương Tự Minh, Phường Quan Triều, Tỉnh Thái Nguyên</li>
+              <li>
+                <a href="tel:0989759759">0989 759 759</a>
+              </li>
+              <li>
+                <a href="mailto:annhien759@gmail.com">annhien759@gmail.com</a>
+              </li>
+              <li>
+                <a href="https://annhien.vn">annhien.vn</a>
+              </li>
+            </ul>
+
+            <h3>Giải thưởng</h3>
+            <div className="footer-awards">
+              <div className="footer-award-card">Gold Star Award</div>
+              <div className="footer-award-card">Vô Lăng Vàng 2024</div>
+            </div>
+          </section>
+
+          <section className="footer-links">
+            <h2>Khách hàng</h2>
+            <ul>
+              {footerCustomerLinks.map((item) => (
+                <li key={item}>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
+            </ul>
+
+            <h2>Công ty</h2>
+            <ul>
+              {footerCompanyLinks.map((item) => (
+                <li key={item}>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="footer-social" aria-label="Theo dõi chúng tôi">
+            <h2>Theo dõi chúng tôi</h2>
+            <article className="footer-social-card">
+              <header>
+                <div className="footer-social-page-logo">an</div>
+                <div>
+                  <p>AN NHIÊN</p>
+                  <small>42,833 followers</small>
+                </div>
+              </header>
+              <div className="footer-social-actions">
+                <button type="button">Follow Page</button>
+                <button type="button">Share</button>
+              </div>
+              <div className="footer-social-cover" />
+              <div className="footer-social-post">
+                🚍 Di chuyển nhanh chóng với buslines: Bến xe Thái Nguyên – Bến xe Mỹ Đình chỉ từ 90K!
+              </div>
+            </article>
+            <div className="footer-certification">ĐÃ THÔNG BÁO - BỘ CÔNG THƯƠNG</div>
+          </section>
+        </div>
+      </footer>
     </div>
   )
 }
