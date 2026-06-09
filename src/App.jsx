@@ -52,7 +52,7 @@ const serviceCards = [
     imagePosition: 'center right',
     icon: 'support',
     points: [
-      'Tần suất chuyến ổn định, phù hợp cả nhu cầu đi lại hàng ngày.',
+      'Tần suất 1 tiếng 1 chuyến, 2 xe xuất phát cùng giờ, phù hợp cả nhu cầu đi lại hàng ngày.',
       'Khung giờ vận hành linh hoạt, thuận tiện cho công việc và du lịch.',
       'Kênh hỗ trợ đặt vé luôn sẵn sàng giải đáp khi cần thiết.',
     ],
@@ -641,9 +641,12 @@ function App() {
             </p>
 
             <ul className="footer-contact-list">
-              <li>Văn phòng tại Cẩm Phả và Hà Nội</li>
+              <li>247 Đường Vũng Đục, Phường Cẩm Phả</li>
               <li>
-                <a href="tel:0989759759">0989 759 759</a>
+                <a href="tel:19008188">19008188</a>
+              </li>
+              <li>
+                <a href="tel:02033658658">02033.658658</a>
               </li>
               <li>
                 <a href="mailto:tuyencamphahanoi@gmail.com">tuyencamphahanoi@gmail.com</a>
