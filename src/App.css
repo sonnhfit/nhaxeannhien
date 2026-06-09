@@ -181,6 +181,154 @@
   line-height: 1.55;
 }
 
+.popular-routes {
+  margin-top: 4rem;
+  padding: 4.5rem 1rem 3.5rem;
+  background: #fee9cf;
+}
+
+.popular-routes-heading {
+  text-align: center;
+}
+
+.popular-routes-heading h2 {
+  margin: 0;
+  color: #f47c08;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+}
+
+.popular-routes-heading p {
+  margin: 0.85rem 0 0;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.popular-routes-slider {
+  max-width: 1360px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slider-arrow {
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 154, 30, 0.22);
+  color: #f47c08;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.slider-arrow:hover {
+  background: rgba(255, 154, 30, 0.35);
+}
+
+.route-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.2rem;
+}
+
+.route-column {
+  overflow: hidden;
+  border: 1px solid #d8e0e8;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 16px 32px rgba(148, 163, 184, 0.2);
+}
+
+.route-column-image {
+  height: 225px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.route-list {
+  display: grid;
+}
+
+.route-item {
+  padding: 1.1rem 1.2rem 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.route-item:first-child {
+  border-top: 0;
+}
+
+.route-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.route-item-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.route-item-header button {
+  border: 1.5px solid #ff8d19;
+  border-radius: 999px;
+  background: #fff;
+  color: #ff8d19;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.route-item-header button:hover,
+.show-more-routes:hover {
+  background: #ff8d19;
+  color: #fff;
+}
+
+.route-meta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.route-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.route-meta svg {
+  width: 20px;
+  height: 20px;
+  color: #ff8d19;
+  flex: 0 0 auto;
+}
+
+.show-more-routes {
+  display: block;
+  margin: 3rem auto 0;
+  min-width: 280px;
+  padding: 1rem 2rem;
+  border: 3px solid #ff8d19;
+  border-radius: 999px;
+  background: transparent;
+  color: #ff8d19;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .site-header {
     padding: 0.75rem 1rem;
@@ -213,5 +361,35 @@
   .features {
     grid-template-columns: 1fr;
     margin-top: 1.5rem;
+  }
+
+  .popular-routes {
+    padding-top: 3rem;
+  }
+
+  .popular-routes-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+
+  .route-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .route-item-header,
+  .route-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .route-item-header button,
+  .show-more-routes {
+    width: 100%;
   }
 }
