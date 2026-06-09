@@ -1,6 +1,8 @@
 :root {
   --primary: #39c3c0;
   --primary-dark: #238a88;
+  --primary-soft: #e2f7f6;
+  --primary-deep: #105351;
   --text: #1f2a37;
   --muted: #5f6c7b;
   --surface: rgba(255, 255, 255, 0.95);
@@ -8,7 +10,7 @@
 
 .page {
   min-height: 100vh;
-  background: #f3f8f8;
+  background: linear-gradient(180deg, #f4fbfb 0%, #eef8f8 100%);
   color: var(--text);
 }
 
@@ -78,18 +80,21 @@
 .hero {
   position: relative;
   min-height: 630px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(15, 23, 42, 0.1),
-      rgba(15, 23, 42, 0.35)
-    ),
-    url('https://github.com/user-attachments/assets/cc719ccb-ae2e-44c8-a45c-3c20a8aab30d');
+  background-image: url('/An-Nhien-Quang-Ninh-4.webp');
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 4rem 2rem 2rem;
+  isolation: isolate;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(16, 83, 81, 0.78), rgba(57, 195, 192, 0.38));
+  z-index: 0;
 }
 
 .hero-content {
@@ -167,7 +172,8 @@
   background: #fff;
   border-radius: 1rem;
   padding: 1.2rem;
-  border: 1px solid #dce8e8;
+  border: 1px solid #d5eceb;
+  box-shadow: 0 12px 30px rgba(57, 195, 192, 0.08);
 }
 
 .feature-item h2 {
@@ -181,10 +187,106 @@
   line-height: 1.55;
 }
 
+.service-showcase {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+}
+
+.service-showcase-heading {
+  text-align: center;
+}
+
+.service-showcase-heading h2 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+}
+
+.service-showcase-heading p {
+  margin: 0.9rem auto 0;
+  max-width: 860px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.service-showcase-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.service-card {
+  overflow: hidden;
+  border-radius: 1.6rem;
+  background: #fff;
+  border: 1px solid #d5eceb;
+  box-shadow: 0 20px 40px rgba(16, 83, 81, 0.1);
+}
+
+.service-card-image {
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service-card-body {
+  padding: 1.6rem;
+}
+
+.service-card-body h3 {
+  margin: 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.2;
+}
+
+.service-card-body p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.service-card-points {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.service-card-points li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: flex-start;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.service-card-icon {
+  width: 2.45rem;
+  height: 2.45rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  flex: 0 0 auto;
+}
+
+.service-card-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .popular-routes {
   margin-top: 4rem;
   padding: 4.5rem 1rem 3.5rem;
-  background: #fee9cf;
+  background: linear-gradient(180deg, #dff7f6 0%, #f3fbfb 100%);
 }
 
 .popular-routes-heading {
@@ -193,7 +295,7 @@
 
 .popular-routes-heading h2 {
   margin: 0;
-  color: #f47c08;
+  color: var(--primary-deep);
   font-size: clamp(1.8rem, 3vw, 3rem);
   line-height: 1.2;
 }
@@ -219,15 +321,15 @@
   height: 54px;
   border: 0;
   border-radius: 50%;
-  background: rgba(255, 154, 30, 0.22);
-  color: #f47c08;
+  background: rgba(57, 195, 192, 0.18);
+  color: var(--primary-dark);
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
 }
 
 .slider-arrow:hover {
-  background: rgba(255, 154, 30, 0.35);
+  background: rgba(57, 195, 192, 0.3);
 }
 
 .route-columns {
@@ -238,10 +340,10 @@
 
 .route-column {
   overflow: hidden;
-  border: 1px solid #d8e0e8;
+  border: 1px solid #d5eceb;
   border-radius: 1.5rem;
   background: #fff;
-  box-shadow: 0 16px 32px rgba(148, 163, 184, 0.2);
+  box-shadow: 0 16px 32px rgba(16, 83, 81, 0.12);
 }
 
 .route-column-image {
@@ -276,10 +378,10 @@
 }
 
 .route-item-header button {
-  border: 1.5px solid #ff8d19;
+  border: 1.5px solid var(--primary-dark);
   border-radius: 999px;
   background: #fff;
-  color: #ff8d19;
+  color: var(--primary-dark);
   padding: 0.65rem 1.25rem;
   font-size: 0.95rem;
   font-weight: 700;
@@ -289,7 +391,7 @@
 
 .route-item-header button:hover,
 .show-more-routes:hover {
-  background: #ff8d19;
+  background: var(--primary-dark);
   color: #fff;
 }
 
@@ -311,7 +413,7 @@
 .route-meta svg {
   width: 20px;
   height: 20px;
-  color: #ff8d19;
+  color: var(--primary-dark);
   flex: 0 0 auto;
 }
 
@@ -320,10 +422,10 @@
   margin: 3rem auto 0;
   min-width: 280px;
   padding: 1rem 2rem;
-  border: 3px solid #ff8d19;
+  border: 3px solid var(--primary-dark);
   border-radius: 999px;
   background: transparent;
-  color: #ff8d19;
+  color: var(--primary-dark);
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);
   font-weight: 800;
   cursor: pointer;
@@ -363,6 +465,10 @@
     margin-top: 1.5rem;
   }
 
+  .service-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
   .popular-routes {
     padding-top: 3rem;
   }
@@ -382,6 +488,10 @@
 }
 
 @media (max-width: 640px) {
+  .service-card-image {
+    height: 240px;
+  }
+
   .route-item-header,
   .route-meta {
     flex-direction: column;
