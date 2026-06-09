@@ -18,6 +18,48 @@ const featureItems = [
   { title: 'Theo dõi chuyến đi', text: 'Cập nhật lịch trình, điểm đón trả minh bạch theo thời gian thực.' },
 ]
 
+const serviceCards = [
+  {
+    title: 'Dịch vụ vận tải đẳng cấp',
+    description:
+      'Mang đến trải nghiệm di chuyển êm ái, an toàn và chỉn chu cho mọi hành khách trên từng chặng đường.',
+    image: '/An-Nhien-Quang-Ninh-4.webp',
+    imagePosition: 'center center',
+    icon: 'quality',
+    points: [
+      'Nội thất rộng rãi, ghế ngồi thoải mái và khoang hành lý gọn gàng.',
+      'Trang bị tiện ích cơ bản, hỗ trợ hành trình dễ chịu suốt chuyến đi.',
+      'Đội ngũ tài xế và nhân viên phục vụ tận tâm, chuyên nghiệp.',
+    ],
+  },
+  {
+    title: 'Đưa đón linh hoạt tận nơi',
+    description:
+      'Tối ưu thời gian di chuyển với phương án trung chuyển phù hợp, giúp hành khách chủ động hơn khi đặt xe.',
+    image: heroImage,
+    imagePosition: 'top center',
+    icon: 'pickup',
+    points: [
+      'Hỗ trợ đón trả tại nhiều điểm thuận tiện theo từng tuyến khai thác.',
+      'Điều phối xe trung chuyển nhanh chóng, hạn chế thời gian chờ.',
+      'Thông tin lịch trình rõ ràng, dễ theo dõi trước giờ khởi hành.',
+    ],
+  },
+  {
+    title: 'Hỗ trợ mọi khung giờ',
+    description:
+      'Luôn sẵn sàng đồng hành cùng khách hàng với lịch xe đều đặn và đội ngũ tư vấn phản hồi nhanh chóng.',
+    image: heroImage,
+    imagePosition: 'center right',
+    icon: 'support',
+    points: [
+      'Tần suất chuyến ổn định, phù hợp cả nhu cầu đi lại hàng ngày.',
+      'Khung giờ vận hành linh hoạt, thuận tiện cho công việc và du lịch.',
+      'Kênh hỗ trợ đặt vé luôn sẵn sàng giải đáp khi cần thiết.',
+    ],
+  },
+]
+
 const routeColumns = [
   {
     imagePosition: 'center center',
@@ -117,6 +159,75 @@ function RouteInfoIcon({ type }) {
   )
 }
 
+function ServiceFeatureIcon({ type }) {
+  if (type === 'pickup') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M4 14V8.5C4 7.7 4.7 7 5.5 7h7.8c.7 0 1.4.4 1.8 1l2.3 3.2c.4.5.6 1 .6 1.6V14"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+        <path
+          d="M7 16.8a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Zm10 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6ZM4 12h14"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    )
+  }
+
+  if (type === 'support') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M6 11a6 6 0 0 1 12 0v2.5a1.5 1.5 0 0 1-1.5 1.5H15"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+        <path
+          d="M6 15H5.5A1.5 1.5 0 0 1 4 13.5v-2A1.5 1.5 0 0 1 5.5 10H6m9 8h-2.5A2.5 2.5 0 0 1 10 15.5"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="m9.2 12.6 1.9 1.9 3.7-4.4"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M12 3.8 5.8 6.3v4.4c0 4 2.5 7.7 6.2 9 3.7-1.3 6.2-5 6.2-9V6.3L12 3.8Z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  )
+}
+
 function App() {
   return (
     <div className="page">
@@ -178,10 +289,47 @@ function App() {
           ))}
         </section>
 
+        <section className="service-showcase" aria-labelledby="service-showcase-title">
+          <div className="service-showcase-heading">
+            <h2 id="service-showcase-title">An Nhiên - Đồng hành an tâm trên mọi hành trình</h2>
+            <p>Giải pháp di chuyển tiện lợi, chuyên nghiệp và thống nhất với trải nghiệm thương hiệu An Nhiên.</p>
+          </div>
+
+          <div className="service-showcase-grid">
+            {serviceCards.map((card) => (
+              <article key={card.title} className="service-card">
+                <div
+                  className="service-card-image"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(16, 83, 81, 0.12), rgba(16, 83, 81, 0.28)), url(${card.image})`,
+                    backgroundPosition: card.imagePosition,
+                  }}
+                />
+
+                <div className="service-card-body">
+                  <h3>{card.title}</h3>
+                  <p>{card.description}</p>
+
+                  <ul className="service-card-points">
+                    {card.points.map((point) => (
+                      <li key={point}>
+                        <span className="service-card-icon">
+                          <ServiceFeatureIcon type={card.icon} />
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="popular-routes" aria-labelledby="popular-routes-title">
           <div className="popular-routes-heading">
-            <h2 id="popular-routes-title">Lộ trình phổ biến Hà Lan Limousine &amp; Hà Lan Buslines</h2>
-            <p>Được khách hàng tin tưởng và lựa chọn!</p>
+            <h2 id="popular-routes-title">Lộ trình phổ biến của An Nhiên</h2>
+            <p>Những tuyến xe được khách hàng lựa chọn thường xuyên.</p>
           </div>
 
           <div className="popular-routes-slider">
