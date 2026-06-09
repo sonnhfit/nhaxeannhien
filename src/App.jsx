@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import heroImage from './assets/hero.png'
-
 const navItems = [
   'Trang chủ',
   'Giới thiệu',
@@ -63,6 +61,7 @@ const serviceCards = [
 
 const routeColumns = [
   {
+    image: '/An-Nhien-Quang-Ninh-4.webp',
     imagePosition: 'center center',
     routes: [
       { name: 'Hà Nội - Hạ Long', distance: '140km', duration: "3 giờ 00'", vehicle: 'Limo 10 chỗ' },
@@ -72,6 +71,7 @@ const routeColumns = [
     ],
   },
   {
+    image: '/anhxedangchao.jpeg',
     imagePosition: 'top center',
     routes: [
       { name: 'Thái Nguyên - Hà Nội', distance: '81km', duration: "1 giờ 40'", vehicle: 'Limo 10 chỗ' },
@@ -81,6 +81,7 @@ const routeColumns = [
     ],
   },
   {
+    image: '/dichvuhotro.jpeg',
     imagePosition: 'center right',
     routes: [
       { name: 'Thái Nguyên - Tuyên Quang', distance: '85km', duration: "2 giờ 00'", vehicle: 'Limo 10 chỗ' },
@@ -498,7 +499,7 @@ function App() {
                   <div
                     className="route-column-image"
                     style={{
-                      backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.2)), url(${heroImage})`,
+                      backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.2)), url(${column.image})`,
                       backgroundPosition: column.imagePosition,
                     }}
                   />
