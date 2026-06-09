@@ -59,38 +59,18 @@ const serviceCards = [
   },
 ]
 
-const routeColumns = [
-  {
-    image: '/An-Nhien-Quang-Ninh-4.webp',
-    imagePosition: 'center center',
-    routes: [
-      { name: 'Hà Nội - Hạ Long', distance: '140km', duration: "3 giờ 00'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Hà Nội - Cẩm Phả', distance: '150km', duration: "3 giờ 30'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Nội Bài - Hạ Long', distance: '160km', duration: "4 giờ 00'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Nội Bài - Cẩm Phả', distance: '170km', duration: "4 giờ 30'", vehicle: 'Limo 10 chỗ' },
-    ],
-  },
-  {
-    image: '/anhxedangchao.jpeg',
-    imagePosition: 'top center',
-    routes: [
-      { name: 'Thái Nguyên - Hà Nội', distance: '81km', duration: "1 giờ 40'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Thái Nguyên - Nội Bài', distance: '64km', duration: "1 giờ 20'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Thái Nguyên - Hạ Long', distance: '320km', duration: "4 giờ 30'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Thái Nguyên - Cẩm Phả', distance: '340km', duration: "5 giờ 00'", vehicle: 'Limo 10 chỗ' },
-    ],
-  },
-  {
-    image: '/dichvuhotro.jpeg',
-    imagePosition: 'center right',
-    routes: [
-      { name: 'Thái Nguyên - Tuyên Quang', distance: '85km', duration: "2 giờ 00'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Thái Nguyên - Bắc Kạn', distance: '85km', duration: "1 giờ 40'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Bắc Kạn - Hà Nội', distance: '150km', duration: "3 giờ 20'", vehicle: 'Limo 10 chỗ' },
-      { name: 'Bắc Kạn - Nội Bài', distance: '130km', duration: "3 giờ 00'", vehicle: 'Limo 10 chỗ' },
-    ],
-  },
-]
+const popularRoute = {
+  image: '/An-Nhien-Quang-Ninh-4.webp',
+  imagePosition: 'center center',
+  name: 'Tuyến cố định Cẩm Phả - Hà Nội',
+  description:
+    'Lộ trình được khách hàng lựa chọn thường xuyên với lịch chạy cố định, thuận tiện cho cả nhu cầu đi lại hằng ngày lẫn công tác.',
+  highlights: [
+    '1 tiếng 1 chuyến, giúp khách dễ chủ động sắp xếp thời gian.',
+    '2 xe xuất phát cùng giờ để tăng khả năng phục vụ trong các khung giờ cao điểm.',
+    'Phục vụ đều đặn mỗi ngày trên tuyến Cẩm Phả - Hà Nội.',
+  ],
+}
 
 const shippingFeatures = [
   {
@@ -143,75 +123,6 @@ const footerCustomerLinks = [
 ]
 
 const footerCompanyLinks = ['Giới thiệu', 'Văn phòng', 'Tin tức', 'Tuyến xe']
-
-function RouteInfoIcon({ type }) {
-  if (type === 'distance') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M4 18.5A2.5 2.5 0 1 0 4 13.5a2.5 2.5 0 0 0 0 5Zm16 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM6.5 16h4l2.2-6.2a2 2 0 0 1 1.9-1.3H18"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-        />
-        <path
-          d="M14.8 8.5 12 15m0 0h8"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-        />
-      </svg>
-    )
-  }
-
-  if (type === 'duration') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle
-          cx="12"
-          cy="12"
-          r="8.5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-        <path
-          d="M12 7.5v5l3 2"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-        />
-      </svg>
-    )
-  }
-
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M4 15.5V8.8C4 7.8 4.8 7 5.8 7H15c.8 0 1.5.4 1.9 1l2 3c.4.5.6 1.1.6 1.8v2.7"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
-      <path
-        d="M6.5 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM4 13h15"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
-    </svg>
-  )
-}
 
 function ServiceFeatureIcon({ type }) {
   if (type === 'pickup') {
@@ -488,59 +399,33 @@ function App() {
             <p>Những tuyến xe được khách hàng lựa chọn thường xuyên.</p>
           </div>
 
-          <div className="popular-routes-slider">
-            <button type="button" className="slider-arrow" aria-label="Xem lộ trình trước">
-              ←
-            </button>
+          <div className="popular-route-card">
+            <div
+              className="popular-route-image"
+              style={{
+                backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.2)), url(${popularRoute.image})`,
+                backgroundPosition: popularRoute.imagePosition,
+              }}
+            />
 
-            <div className="route-columns">
-              {routeColumns.map((column, columnIndex) => (
-                <article key={columnIndex} className="route-column">
-                  <div
-                    className="route-column-image"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.2)), url(${column.image})`,
-                      backgroundPosition: column.imagePosition,
-                    }}
-                  />
+            <div className="popular-route-content">
+              <div className="popular-route-header">
+                <div>
+                  <p className="popular-route-label">Lộ trình duy nhất đang khai thác</p>
+                  <h3>{popularRoute.name}</h3>
+                </div>
+                <button type="button">Đặt xe</button>
+              </div>
 
-                  <div className="route-list">
-                    {column.routes.map((route) => (
-                      <div key={route.name} className="route-item">
-                        <div className="route-item-header">
-                          <h3>{route.name}</h3>
-                          <button type="button">Đặt xe</button>
-                        </div>
+              <p className="popular-route-description">{popularRoute.description}</p>
 
-                        <div className="route-meta" aria-label={`Thông tin tuyến ${route.name}`}>
-                          <span>
-                            <RouteInfoIcon type="distance" />
-                            {route.distance}
-                          </span>
-                          <span>
-                            <RouteInfoIcon type="duration" />
-                            {route.duration}
-                          </span>
-                          <span>
-                            <RouteInfoIcon type="vehicle" />
-                            {route.vehicle}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              ))}
+              <ul className="popular-route-highlights">
+                {popularRoute.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
             </div>
-
-            <button type="button" className="slider-arrow" aria-label="Xem lộ trình tiếp theo">
-              →
-            </button>
           </div>
-
-          <button type="button" className="show-more-routes">
-            Xem thêm
-          </button>
         </section>
 
         <section className="shipping-service" aria-labelledby="shipping-service-title">

@@ -340,38 +340,9 @@
   font-weight: 600;
 }
 
-.popular-routes-slider {
-  max-width: 1360px;
+.popular-route-card {
+  max-width: 920px;
   margin: 3rem auto 0;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 1rem;
-}
-
-.slider-arrow {
-  width: 54px;
-  height: 54px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(57, 195, 192, 0.18);
-  color: var(--primary-dark);
-  font-size: 2rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.slider-arrow:hover {
-  background: rgba(57, 195, 192, 0.3);
-}
-
-.route-columns {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2.2rem;
-}
-
-.route-column {
   overflow: hidden;
   border: 1px solid #d5eceb;
   border-radius: 1.5rem;
@@ -379,38 +350,40 @@
   box-shadow: 0 16px 32px rgba(16, 83, 81, 0.12);
 }
 
-.route-column-image {
-  height: 225px;
+.popular-route-image {
+  height: 320px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.route-list {
-  display: grid;
+.popular-route-content {
+  padding: 1.8rem;
 }
 
-.route-item {
-  padding: 1.1rem 1.2rem 1.25rem;
-  border-top: 1px solid #e5e7eb;
-}
-
-.route-item:first-child {
-  border-top: 0;
-}
-
-.route-item-header {
+.popular-route-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-.route-item-header h3 {
+.popular-route-label {
   margin: 0;
-  font-size: 1rem;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.route-item-header button {
+.popular-route-header h3 {
+  margin: 0.45rem 0 0;
+  color: var(--primary-deep);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.popular-route-header button {
   border: 1.5px solid var(--primary-dark);
   border-radius: 999px;
   background: #fff;
@@ -422,46 +395,42 @@
   white-space: nowrap;
 }
 
-.route-item-header button:hover,
-.show-more-routes:hover {
+.popular-route-header button:hover {
   background: var(--primary-dark);
   color: #fff;
 }
 
-.route-meta {
-  margin-top: 1rem;
+.popular-route-description {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.popular-route-highlights {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.popular-route-highlights li {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  color: #6b7280;
-  font-weight: 700;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: #334155;
+  line-height: 1.6;
 }
 
-.route-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.route-meta svg {
-  width: 20px;
-  height: 20px;
-  color: var(--primary-dark);
-  flex: 0 0 auto;
-}
-
-.show-more-routes {
-  display: block;
-  margin: 3rem auto 0;
-  min-width: 280px;
-  padding: 1rem 2rem;
-  border: 3px solid var(--primary-dark);
+.popular-route-highlights li::before {
+  content: '';
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0.35rem;
   border-radius: 999px;
-  background: transparent;
-  color: var(--primary-dark);
-  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-  font-weight: 800;
-  cursor: pointer;
+  background: var(--primary);
+  flex: 0 0 auto;
 }
 
 .shipping-service {
@@ -982,17 +951,8 @@
     padding-top: 3rem;
   }
 
-  .popular-routes-slider {
-    grid-template-columns: 1fr;
-  }
-
-  .slider-arrow {
-    display: none;
-  }
-
-  .route-columns {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .popular-route-card {
+    margin-top: 2rem;
   }
 
   .shipping-service {
@@ -1036,14 +996,16 @@
     height: 240px;
   }
 
-  .route-item-header,
-  .route-meta {
+  .popular-route-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .route-item-header button,
-  .show-more-routes {
+  .popular-route-image {
+    height: 240px;
+  }
+
+  .popular-route-header button {
     width: 100%;
   }
 
