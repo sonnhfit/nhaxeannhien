@@ -628,31 +628,34 @@ function App() {
             <div className="footer-brand">
               <div className="footer-brand-logo">an</div>
               <div>
-                <p className="footer-brand-name">AN NHIÊN</p>
-                <p className="footer-brand-tagline">Sứ mệnh tiên phong</p>
+                <p className="footer-brand-name">CẨM PHẢ - HÀ NỘI</p>
+                <p className="footer-brand-tagline">Nhà xe tuyến cố định</p>
               </div>
             </div>
 
-            <h2>Công ty CP Thương Mại và Du Lịch An Nhiên</h2>
-            <p>GPKD số 4600346825 do Sở KH và ĐT TP Thái Nguyên cấp ngày 30/10/2003</p>
+            <h2>Nhà xe tuyến Cẩm Phả - Hà Nội</h2>
+            <p>
+              Chuyên vận chuyển hành khách tuyến cố định Cẩm Phả - Hà Nội với lịch chạy đều đặn
+              mỗi ngày.
+            </p>
 
             <ul className="footer-contact-list">
-              <li>Số 271, Đường Dương Tự Minh, Phường Quan Triều, Tỉnh Thái Nguyên</li>
+              <li>Văn phòng tại Cẩm Phả và Hà Nội</li>
               <li>
                 <a href="tel:0989759759">0989 759 759</a>
               </li>
               <li>
-                <a href="mailto:annhien759@gmail.com">annhien759@gmail.com</a>
+                <a href="mailto:tuyencamphahanoi@gmail.com">tuyencamphahanoi@gmail.com</a>
               </li>
               <li>
-                <a href="https://annhien.vn">annhien.vn</a>
+                <a href="https://camphahanoi.vn">camphahanoi.vn</a>
               </li>
             </ul>
 
-            <h3>Giải thưởng</h3>
+            <h3>Cam kết dịch vụ</h3>
             <div className="footer-awards">
-              <div className="footer-award-card">Gold Star Award</div>
-              <div className="footer-award-card">Vô Lăng Vàng 2024</div>
+              <div className="footer-award-card">Khởi hành đúng giờ</div>
+              <div className="footer-award-card">Đón trả đúng điểm</div>
             </div>
           </section>
 
@@ -682,8 +685,8 @@ function App() {
               <header>
                 <div className="footer-social-page-logo">an</div>
                 <div>
-                  <p>AN NHIÊN</p>
-                  <small>42,833 followers</small>
+                  <p>CẨM PHẢ - HÀ NỘI</p>
+                  <small>Thông tin tuyến xe mỗi ngày</small>
                 </div>
               </header>
               <div className="footer-social-actions">
@@ -692,7 +695,7 @@ function App() {
               </div>
               <div className="footer-social-cover" />
               <div className="footer-social-post">
-                🚍 Di chuyển nhanh chóng với buslines: Bến xe Thái Nguyên – Bến xe Mỹ Đình chỉ từ 90K!
+                🚍 Nhà xe tuyến Cẩm Phả - Hà Nội nhận đặt vé mỗi ngày, hỗ trợ khách 24/7.
               </div>
             </article>
             <div className="footer-certification">ĐÃ THÔNG BÁO - BỘ CÔNG THƯƠNG</div>
