@@ -37,7 +37,7 @@ const serviceCards = [
     title: 'Đưa đón linh hoạt tận nơi',
     description:
       'Tối ưu thời gian di chuyển với phương án trung chuyển phù hợp, giúp hành khách chủ động hơn khi đặt xe.',
-    image: heroImage,
+    image: '/anhxedangchao.jpeg',
     imagePosition: 'top center',
     icon: 'pickup',
     points: [
@@ -50,7 +50,7 @@ const serviceCards = [
     title: 'Hỗ trợ mọi khung giờ',
     description:
       'Luôn sẵn sàng đồng hành cùng khách hàng với lịch xe đều đặn và đội ngũ tư vấn phản hồi nhanh chóng.',
-    image: heroImage,
+    image: '/dichvuhotro.jpeg',
     imagePosition: 'center right',
     icon: 'support',
     points: [
