@@ -648,8 +648,6 @@
   border-radius: 1.2rem;
   background: rgba(255, 255, 255, 0.9);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
 }
 
 .support-box img {
@@ -657,37 +655,6 @@
   height: 100%;
   object-fit: cover;
   min-height: 360px;
-}
-
-.support-hotlines {
-  padding: 1.5rem;
-  display: grid;
-  gap: 1.2rem;
-  align-content: center;
-}
-
-.support-hotline-item h3 {
-  margin: 0;
-  color: var(--text);
-  font-size: 2rem;
-}
-
-.support-hotline-item a {
-  margin-top: 0.65rem;
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  background: var(--primary);
-  border: 2px solid var(--primary-dark);
-  border-radius: 999px;
-  padding: 0.65rem 1.6rem;
-  font-size: 1.9rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-.support-hotline-item a:hover {
-  background: var(--primary-dark);
 }
 
 .feedback-panel {
@@ -1046,8 +1013,7 @@
     padding-bottom: 3rem;
   }
 
-  .support-feedback-grid,
-  .support-box {
+  .support-feedback-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1099,21 +1065,4 @@
     padding: 1.2rem;
   }
 
-  .support-hotlines {
-    padding: 1rem;
-  }
-
-  .support-hotline-item h3 {
-    font-size: 1.35rem;
-  }
-
-  .support-hotline-item a {
-    width: 100%;
-    text-align: center;
-    font-size: 1.35rem;
-  }
-
-  .footer-awards {
-    grid-template-columns: 1fr;
-  }
 }

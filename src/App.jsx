@@ -109,11 +109,6 @@ const shippingFeatures = [
   },
 ]
 
-const supportHotlines = [
-  { region: 'Thái Nguyên', phone: '0989.759.759' },
-  { region: 'Quảng Ninh', phone: '0817.759.759' },
-]
-
 const customerReviews = [
   {
     name: 'Hoàng Long',
@@ -598,18 +593,9 @@ function App() {
 
               <div className="support-box">
                 <img
-                  src="https://github.com/user-attachments/assets/80d8842b-d5e9-4e03-bd78-768c6c18d2dc"
+                  src="/tongdai_nhaxe.jpeg"
                   alt="Tổng đài hỗ trợ đặt xe An Nhiên"
                 />
-
-                <div className="support-hotlines">
-                  {supportHotlines.map((item) => (
-                    <div key={item.region} className="support-hotline-item">
-                      <h3>Hotline {item.region}</h3>
-                      <a href={`tel:${item.phone.replaceAll('.', '')}`}>{item.phone}</a>
-                    </div>
-                  ))}
-                </div>
               </div>
             </article>
 
