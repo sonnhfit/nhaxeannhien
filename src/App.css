@@ -747,7 +747,7 @@
 }
 
 .site-footer {
-  background: #e8d7c0;
+  background: linear-gradient(180deg, #e8f8f8 0%, #ddf2f2 100%);
   border-top: 4px solid var(--primary);
   padding: 3.5rem 1rem 2.5rem;
 }
@@ -764,7 +764,7 @@
 .footer-links h2,
 .footer-social h2 {
   margin: 0;
-  color: #1f2937;
+  color: var(--primary-deep);
 }
 
 .footer-company h2 {
@@ -774,7 +774,7 @@
 
 .footer-company p {
   margin: 0.8rem 0 0;
-  color: #374151;
+  color: #235767;
   line-height: 1.5;
 }
 
@@ -805,7 +805,7 @@
 
 .footer-brand-tagline {
   margin: 0.15rem 0 0;
-  color: #4b5563;
+  color: #2f6675;
 }
 
 .footer-contact-list {
@@ -818,7 +818,7 @@
 
 .footer-contact-list li,
 .footer-contact-list a {
-  color: #1f2937;
+  color: #184655;
   text-decoration: none;
   line-height: 1.45;
 }
@@ -831,7 +831,7 @@
 .footer-company h3 {
   margin: 2rem 0 0;
   font-size: 2rem;
-  color: #111827;
+  color: var(--primary-deep);
 }
 
 .footer-awards {
@@ -844,13 +844,13 @@
 .footer-award-card {
   min-height: 110px;
   border-radius: 1rem;
-  border: 2px solid rgba(16, 83, 81, 0.25);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(57, 195, 192, 0.15));
+  border: 2px solid rgba(16, 83, 81, 0.22);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(57, 195, 192, 0.24));
   display: grid;
   place-items: center;
   padding: 0.8rem;
   text-align: center;
-  color: #105351;
+  color: var(--primary-deep);
   font-weight: 800;
 }
 
@@ -867,14 +867,14 @@
 }
 
 .footer-links a {
-  color: #1f2937;
+  color: #184655;
   text-decoration: none;
 }
 
 .footer-social-card {
   margin-top: 1rem;
-  border: 1px solid #d1d5db;
-  background: #f8fafc;
+  border: 1px solid #b9e3e2;
+  background: #f3fbfb;
 }
 
 .footer-social-card header {
@@ -901,27 +901,27 @@
   margin: 0;
   font-size: 1.45rem;
   font-weight: 800;
-  color: #1f2937;
+  color: var(--primary-deep);
 }
 
 .footer-social-card header small {
-  color: #4b5563;
+  color: #2f6675;
 }
 
 .footer-social-actions {
   padding: 0.7rem 0.8rem;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #cde7e7;
+  border-bottom: 1px solid #cde7e7;
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
 }
 
 .footer-social-actions button {
-  border: 1px solid #cbd5e1;
+  border: 1px solid #b9e3e2;
   background: #fff;
   border-radius: 0.35rem;
-  color: #334155;
+  color: #1b4f5e;
   font-size: 0.95rem;
   font-weight: 700;
   padding: 0.45rem 0.7rem;
@@ -929,14 +929,14 @@
 
 .footer-social-cover {
   height: 66px;
-  background: linear-gradient(120deg, #f59e0b, #f97316);
+  background: linear-gradient(120deg, #1ca9a6, #39c3c0);
 }
 
 .footer-social-post {
   padding: 0.8rem;
   font-size: 1.1rem;
   line-height: 1.45;
-  color: #1f2937;
+  color: #1b4f5e;
 }
 
 .footer-certification {
@@ -944,7 +944,7 @@
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  background: #0ea5e9;
+  background: var(--primary-dark);
   color: #fff;
   font-size: 0.82rem;
   font-weight: 800;
