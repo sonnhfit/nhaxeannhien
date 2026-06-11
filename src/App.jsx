@@ -768,6 +768,9 @@ function App() {
             <div className="footer-certification">ĐÃ THÔNG BÁO - BỘ CÔNG THƯƠNG</div>
           </section>
         </div>
+        <div className="footer-bottom">
+          <p>Người chịu trách nhiệm nội dung: Nguyễn Thế Nhiệm</p>
+        </div>
       </footer>
     </div>
   )
