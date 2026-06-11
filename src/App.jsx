@@ -769,7 +769,7 @@ function App() {
           </section>
         </div>
         <div className="footer-bottom">
-          <p>Người chịu trách nhiệm nội dung: Nguyễn Thế Nhiệm</p>
+          <p>Người chịu trách nhiệm nội dung: Nguyễn Thế Nhiệm - <a href="tel:0981811675">0981811675</a></p>
         </div>
       </footer>
     </div>
